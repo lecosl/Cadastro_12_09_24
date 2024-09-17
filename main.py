@@ -66,11 +66,12 @@ opcao = 0
 while opcao != 3:
     mostrar_menu()
     opcao = int(input('Digite a opção desejada: '))
+    match (opcao):
 
-    if opcao == 1:
-        cadastrar_usuario(usuarios)
-    elif opcao == 2:
-        listar_usuarios(usuarios)
-    else:
-        print('Opção inválida. Tente novamente.\n')
+        case 1:
+            cadastrar_usuario(usuarios)
+        case 2:
+            listar_usuarios(usuarios)
+        case _ :
+            print('Opção inválida. Tente novamente.\n')
 print('Programa Finalizado!')
